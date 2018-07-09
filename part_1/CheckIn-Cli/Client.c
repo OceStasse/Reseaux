@@ -140,11 +140,11 @@ int main()
                     }
                     
                     if(strcmp(buffer, "Logout") == 0)
-		    {
-		        printf("Serveur down !\n");
-		        close(soc);
-		        exit(-1);
-		    }
+                    {
+                        printf("Serveur down !\n");
+                        close(soc);
+                        exit(-1);
+                    }
 			    
                     if(strcmp(buffer, "CheckTicket:OK") == 0)
                     {
@@ -181,11 +181,11 @@ int main()
                             }
                             
                             if(strcmp(buffer, "Logout") == 0)
-			    {
-			        printf("Serveur down !\n");
-			        close(soc);
-			        exit(-1);
-			    }
+                            {
+                                printf("Serveur down !\n");
+                                close(soc);
+                                exit(-1);
+                            }
                             
                             if(strcmp(buffer, "CheckLuggage:OK") == 0)
                             {
