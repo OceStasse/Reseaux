@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="database.utilities">
+  <ClassDiagramComponents>
+    <Class name="DatabaseAccess" package="database.utilities" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="URL" type="String" visibility="protected"/>
+        <Field name="driver" type="String" visibility="protected"/>
+        <Field name="_connection" type="Connection" visibility="private"/>
+        <Field name="properties" type="Properties" visibility="private"/>
+        <Field name="_user" type="String" visibility="private" isFinal="true"/>
+        <Field name="_password" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="csvFilePath"/>
+          <Argument type="String" name="propertiesFilePath"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="databaseType" name="type"/>
+          <Argument type="String" name="ip"/>
+          <Argument type="String" name="port"/>
+          <Argument type="String" name="SID"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="databaseType" name="type"/>
+          <Argument type="String" name="ip"/>
+          <Argument type="String" name="port"/>
+          <Argument type="String" name="SID"/>
+          <Argument type="String" name="schema"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setDriverAndUrl" returnType="void" visibility="private">
+          <Argument type="databaseType" name="type"/>
+          <Argument type="String" name="ip"/>
+          <Argument type="String" name="port"/>
+          <Argument type="String" name="SID"/>
+        </Method>
+        <Method name="connect" returnType="void" visibility="public"/>
+        <Method name="disconnect" returnType="void" visibility="public"/>
+        <Method name="buildTableModel" returnType="DefaultTableModel" visibility="public">
+          <Argument type="ResultSet" name="resultSet"/>
+        </Method>
+        <Method name="setAutoCommit" returnType="void" visibility="public">
+          <Argument type="boolean" name="autocommit"/>
+        </Method>
+        <Method name="commit" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="rollback" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="getPreparedStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="buildPreparedStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Map&lt;Integer, Object&gt;" name="param"/>
+        </Method>
+        <Method name="getStatement" returnType="Statement" visibility="public"/>
+        <Method name="executeQuery" returnType="ResultSet" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="executeQuery" returnType="ResultSet" visibility="public">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Map&lt;Integer, Object&gt;" name="param"/>
+        </Method>
+        <Method name="executeQuery" returnType="ResultSet" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="Map&lt;Integer, Object&gt;" name="param"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Map&lt;Integer, Object&gt;" name="param"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="Map&lt;Integer, Object&gt;" name="param"/>
+        </Method>
+        <Method name="getTableNames" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="getColumnNames" returnType="Vector&lt;String&gt;" visibility="public">
+          <Argument type="ResultSet" name="resultSet"/>
+        </Method>
+        <Method name="getConnection" returnType="Connection" visibility="public"/>
+        <Method name="setConnection" returnType="void" visibility="public">
+          <Argument type="Connection" name="newConnection"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
