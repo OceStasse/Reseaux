@@ -18,108 +18,107 @@ int soc;
 
 int main()
 {
-    {
-        FILE* config;
-        config = fopen("Client.conf", "r+");
-        fseek(config, 5, SEEK_SET);
-        char port[6], sizebuf[6];
-        fgets(port, 6, config);
-        PORT = atoi(port);
-        fseek(config, 9, SEEK_CUR);
-        fgets(sizebuf, 3, config);
-        SIZEBUF = atoi(sizebuf);
-        fclose(config);
-        
-    }
-    
+
+    FILE* config;
+    config = fopen("Client.conf", "r+");
+    fseek(config, 5, SEEK_SET);
+    char port[6], sizebuf[6];
+    fgets(port, 6, config);
+    PORT = atoi(port);
+    fseek(config, 9, SEEK_CUR);
+    fgets(sizebuf, 3, config);
+    SIZEBUF = atoi(sizebuf);
+    fclose(config);
+
+
+
     char buffer[SIZEBUF];
     char id[20];
     char password[20];
     int accessOK = 0;
     char bin;
-    
+
     logout:;
-    if(Sockette(&soc, PORT) == -1)
+    if(Socket(&soc, PORT) == -1)
     {
         perror("Err. Sockette");
         exit(-1);
     }
-   
+
     do
     {
-        
         system("clear");
         printf("***** CheckIn Application - Login *****\n\n");
         printf("Login:\n");
         scanf("%s", id);
         printf("Password:\n");
         scanf("%s", password);
-        
+
         strcpy(buffer, "Login:");
         strcat(buffer, id);
         strcat(buffer, ";");
         strcat(buffer, password);
-        
-        
+
+
         if(Sending(&soc, buffer, SIZEBUF) == -1)
         {
             perror("Err. Sending");
             exit(-1);
         }
-        
+
         if(Receiving(&soc, buffer) == -1)
         {
             perror("Err. Receiving");
             exit(-1);
         }
-        
-        
+
+
         if(strcmp(buffer, "Logout") == 0)
         {
             printf("Serveur down !\n");
             close(soc);
             exit(-1);
         }
-        
+
         if(strcmp(buffer, "Login:OK") == 0)
         {
             accessOK = 1;
-            printf("AccÃ¨s AutorisÃ© !\n");
+            printf("Accès Autorisé !\n");
             sleep(2);
         }
         else
         {
-            printf("Login ou Password ErronÃ© !\n");
+            printf("Login ou Password Erroné !\n");
             sleep(2);
         }
-        
+
     }
     while(accessOK != 1);
-    
-    
-    
+
+
+
     char choix;
     int end = 0;
     char numTicket[20];
     char nb_passagers[3];
     char poids_bagage[3];
     char Valise[2];
-    
+
     do
     {
         strcpy(buffer, "");
         system("clear");
         printf("***** CheckIn Application - Menu Principal *****\n\n");
-        printf("1. VÃ©rifier un Billet\n");
-        printf("2. DÃ©connexion\n");
+        printf("1. Vérifier un Billet\n");
+        printf("2. Déconnexion\n");
         printf("3. Quitter\n");
         fgets(&choix, 2, stdin);
-        
+
         switch(choix)
         {
             case '1': system("clear");
-                    printf("***** CheckIn Application - VÃ©rification des Billets *****\n\n");
-                    printf("NumÃ©ro de Ticket:\n");
+                    printf("***** CheckIn Application - Vérification des Billets *****\n\n");
+                    printf("Numéro de Ticket:\n");
                     scanf("%s", numTicket);
                     printf("Nombre de passagers:\n");
                     scanf("%s", nb_passagers);
@@ -132,31 +131,31 @@ int main()
                         perror("Err. Sending");
                         exit(-1);
                     }
-                    
+
                     if(Receiving(&soc, buffer) == -1)
                     {
                         perror("Err. Receiving");
                         exit(-1);
                     }
-                    
+
                     if(strcmp(buffer, "Logout") == 0)
 		    {
 		        printf("Serveur down !\n");
 		        close(soc);
 		        exit(-1);
 		    }
-			    
+
                     if(strcmp(buffer, "CheckTicket:OK") == 0)
                     {
                         printf("Ticket Valide !\n");
                         sleep(2);
-                        
+
                         for(int i = 0; i < atoi(nb_passagers); i+=1)
                         {
                             retry:;
                             system("clear");
-                            printf("***** CheckIn Application - VÃ©rification des bagages *****\n\n");
-                            printf("Poids du bagage nÂ°%d (en kg):\n", i+1);
+                            printf("***** CheckIn Application - Vérification des bagages *****\n\n");
+                            printf("Poids du bagage n°%d (en kg):\n", i+1);
                             scanf("%s", poids_bagage);
                             do
                             {
@@ -173,20 +172,20 @@ int main()
                                 perror("Err. Sending");
                                 exit(-1);
                             }
-                            
+
                             if(Receiving(&soc, buffer) == -1)
                             {
                                 perror("Err. Receiving");
                                 exit(-1);
                             }
-                            
+
                             if(strcmp(buffer, "Logout") == 0)
 			    {
 			        printf("Serveur down !\n");
 			        close(soc);
 			        exit(-1);
 			    }
-                            
+
                             if(strcmp(buffer, "CheckLuggage:OK") == 0)
                             {
                                 printf("Bagage de la personne %d: OK\n", i+1);
@@ -197,7 +196,7 @@ int main()
                             }
                             else
                             {
-                                printf("Bagage de la personne %d: Err. lors de la rÃ©ception\n", i+1);
+                                printf("Bagage de la personne %d: Err. lors de la réception\n", i+1);
                                 sleep(2);
                                 goto retry;
                             }
@@ -223,14 +222,14 @@ int main()
                         goto logout;
                       accessOK = 0;
                       break;
-            default: printf("Choix ErronÃ©: %c\n", choix);
+            default: printf("Choix Erroné: %c\n", choix);
         }
-        
+
     }
     while(end != 1);
-    
+
     close(soc);
-    
+
     return 1;
 
 }
