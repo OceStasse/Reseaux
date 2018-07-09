@@ -139,12 +139,21 @@ int main()
                     }
 
                     if(strcmp(buffer, "Logout") == 0)
+<<<<<<< HEAD
 		    {
 		        printf("Serveur down !\n");
 		        close(soc);
 		        exit(-1);
 		    }
 
+=======
+                    {
+                        printf("Serveur down !\n");
+                        close(soc);
+                        exit(-1);
+                    }
+			    
+>>>>>>> ab6594c19028c9a5466d43b45be64c8cb2737d26
                     if(strcmp(buffer, "CheckTicket:OK") == 0)
                     {
                         printf("Ticket Valide !\n");
@@ -180,12 +189,21 @@ int main()
                             }
 
                             if(strcmp(buffer, "Logout") == 0)
+<<<<<<< HEAD
 			    {
 			        printf("Serveur down !\n");
 			        close(soc);
 			        exit(-1);
 			    }
 
+=======
+                            {
+                                printf("Serveur down !\n");
+                                close(soc);
+                                exit(-1);
+                            }
+                            
+>>>>>>> ab6594c19028c9a5466d43b45be64c8cb2737d26
                             if(strcmp(buffer, "CheckLuggage:OK") == 0)
                             {
                                 printf("Bagage de la personne %d: OK\n", i+1);
