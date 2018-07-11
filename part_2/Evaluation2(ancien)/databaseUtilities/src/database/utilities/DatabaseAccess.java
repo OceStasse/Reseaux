@@ -78,45 +78,45 @@ public class DatabaseAccess implements Serializable{
                 this.driver = "sun.jdbc.odbc.JdbcOdbcDriver";
                 this.URL = "jdbc:odbc:" + SID;
                 break;
-        case ORACLE_THIN:
+            case ORACLE_THIN:
                 this.driver = "oracle.jdbc.driver.OracleDriver";
                 this.URL = "jdbc:oracle:thin:@" + ip + ":" + port + ":" + SID;
                 break;
-        case ORACLE_OCI__8I:
+            case ORACLE_OCI__8I:
                 this.driver = "oracle.jdbc.driver.OracleDriver";
                 this.URL = "jdbc:oracle:oci8:@" + SID;
                 break;
-        case ORACLE_OCI__9I:
+            case ORACLE_OCI__9I:
                 this.driver = "oracle.jdbc.driver.OracleDriver";
                 this.URL = "jdbc:oracle:oci:@" + SID;
                 break;
-        case MICROSOFT_SQL_SERVER:
+            case MICROSOFT_SQL_SERVER:
                 this.driver = "weblogic.jdbc.mssqlserver4.Driver";
                 this.URL = "jdbc:weblogic:mssqlserver4:" + SID + "@" + ip + ":" + port;
                 break;
-        case MICROSOFT_SQL_SERVER_JTURBO:
+            case MICROSOFT_SQL_SERVER_JTURBO:
                 this.driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
                 this.URL = "jdbc:JTurbo://" + ip + ":" + port + "/" + SID;
                 break;
-        case MICROSOFT_SQL_SERVER_2000:
+            case MICROSOFT_SQL_SERVER_2000:
                 this.driver = "com.ashna.jturbo.driver.Driver";
                 this.URL = "jdbc:microsoft:sqlserver://" + ip + ":" + port;
                 if(!SID.isEmpty()) this.URL += ";DatabaseName=" + SID;
                 break;
-        case CSV_FILES:
+            case CSV_FILES:
                 this.driver = "org.relique.jdbc.csv.CsvDriver";
                 this.URL = "jdbc:relique:csv:" + ip;
                 properties = new Properties();
                 break;
-        case MYSQL:
+            case MYSQL:
                 this.driver = "org.gjt.mm.mysql.Driver";
                 this.URL = "jdbc:mysql://" + ip + ":" + port + "/"+ SID;
                 break;
-        case POSTGRESQL:
+            case POSTGRESQL:
                 this.driver = "org.postgresql.Driver";
                 this.URL = "jdbc:postgresql://" + ip + ":" + port + "/"+ SID;
                 break;
-        case SYBASE:
+            case SYBASE:
                 this.driver = "com.sybase.jdbc2.jdbc.SybDriver";
                 this.URL = "jdbc:sybase:Tds:" + ip + ":" + port;
                 break;

@@ -14,7 +14,11 @@ INSERT INTO `BD_AIRPORT`.`postes` VALUES(3, 'employé agréé de tour-operator')
 INSERT INTO `BD_AIRPORT`.`postes` VALUES(4, 'aiguilleur du ciel');
 
 
+<<<<<<< HEAD
 INSERT INTO `BD_AIRPORT`.`agents` VALUES('laurent', 'password', 'Rouffart', 'Nicolas', 1);
+=======
+INSERT INTO `BD_AIRPORT`.`agents` VALUES('nicolas', 'password', 'Nicolas', 'Rouffart', 1);
+>>>>>>> 2ce6ce628866ae6e1b4a6b200ca82c3201199316
 INSERT INTO `BD_AIRPORT`.`agents` VALUES('oceane', 'password', 'Stasse', 'Océane', 1);
 INSERT INTO `BD_AIRPORT`.`agents` VALUES('toto', 'mdp', 'Tata', 'Toto', 2);
 
