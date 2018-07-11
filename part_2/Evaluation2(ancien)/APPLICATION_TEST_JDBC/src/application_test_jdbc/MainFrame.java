@@ -114,6 +114,12 @@ public class MainFrame extends javax.swing.JFrame {
         labelSelectWhere.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         labelSelectWhere.setText("WHERE");
 
+        textFieldSelectWhere.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldSelectWhereActionPerformed(evt);
+            }
+        });
+
         tableSelectResult.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -573,6 +579,10 @@ public class MainFrame extends javax.swing.JFrame {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_buttonFreeExecuteActionPerformed
+
+    private void textFieldSelectWhereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldSelectWhereActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldSelectWhereActionPerformed
 
     /**
      * @param args the command line arguments

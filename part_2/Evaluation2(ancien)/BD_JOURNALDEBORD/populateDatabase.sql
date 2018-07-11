@@ -7,7 +7,7 @@ INSERT INTO intervenants VALUES(2, 'Professeur', 'Vilvens');
 
 INSERT INTO intervenants VALUES(3, 'Professeur', 'Romio');
 
-INSERT INTO intervenants VALUES(4, 'Etudiant', 'Reynders');
+INSERT INTO intervenants VALUES(4, 'Etudiant', 'Rouffart');
 
 INSERT INTO intervenants VALUES(5, 'Etudiant', 'Stasse');
 

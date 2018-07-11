@@ -14,7 +14,7 @@ INSERT INTO `BD_AIRPORT`.`postes` VALUES(3, 'employé agréé de tour-operator')
 INSERT INTO `BD_AIRPORT`.`postes` VALUES(4, 'aiguilleur du ciel');
 
 
-INSERT INTO `BD_AIRPORT`.`agents` VALUES('laurent', 'password', 'Reynders', 'Laurent', 1);
+INSERT INTO `BD_AIRPORT`.`agents` VALUES('laurent', 'password', 'Rouffart', 'Nicolas', 1);
 INSERT INTO `BD_AIRPORT`.`agents` VALUES('oceane', 'password', 'Stasse', 'Océane', 1);
 INSERT INTO `BD_AIRPORT`.`agents` VALUES('toto', 'mdp', 'Tata', 'Toto', 2);
 
@@ -34,7 +34,7 @@ INSERT INTO `BD_AIRPORT`.`statusBagage` VALUES(2, 'Chargé en soute');
 INSERT INTO `BD_AIRPORT`.`statusBagage` VALUES(3, 'Vérifié par la douane');
 
 
-INSERT INTO `BD_AIRPORT`.`passagers` VALUES('592-6495224-88', 'Reynders', 'Laurent');
+INSERT INTO `BD_AIRPORT`.`passagers` VALUES('592-6495224-88', 'Rouffart', 'Nicolas');
 INSERT INTO `BD_AIRPORT`.`passagers` VALUES('592-1234567-88', 'Tata', 'Toto');
 INSERT INTO `BD_AIRPORT`.`passagers` VALUES('592-7654321-88', 'Stasse', 'Oceane');
 
