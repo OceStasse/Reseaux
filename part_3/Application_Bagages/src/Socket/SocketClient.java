@@ -47,7 +47,7 @@ public class SocketClient {
     }
     public RequestBagage receveBagage() throws SocketClientException, IOException, ClassNotFoundException
     {
-        if(ois == null)throw new SocketClientException("error ObjectOutputStream is null");
+        if(ois == null)throw new SocketClientException("error ObjectInputStream is null");
         return (RequestBagage)ois.readObject();
     }
     

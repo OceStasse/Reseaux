@@ -34,7 +34,7 @@ public class RequestDigest implements Serializable{
         this.random = random;
     }
 
-    
+    //<editor-fold defaultstate="collapsed" desc=" Gets / Sets ">
     public byte[] getDigest() {
         return digest;
     }
@@ -74,6 +74,7 @@ public class RequestDigest implements Serializable{
     public void setText(String text) {
         this.text = text;
     }
+    //</editor-fold>
     
     
     

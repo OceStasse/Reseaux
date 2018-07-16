@@ -41,8 +41,7 @@ public class RequestVols implements Serializable {
         this.numAvion = numAvion;
     }
 
-    
-
+    //<editor-fold defaultstate="collapsed" desc=" Gets / Sets ">
     public void setArrivee(String arrivee) {
         this.arrivee = arrivee;
     }
@@ -98,5 +97,6 @@ public class RequestVols implements Serializable {
     public boolean getTraitement() {
         return traitement;
     }
+    //</editor-fold>
     
 }

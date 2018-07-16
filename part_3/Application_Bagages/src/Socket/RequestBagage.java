@@ -28,6 +28,7 @@ public class RequestBagage implements Serializable {
         this.valise = valise;
     }
 
+    //<editor-fold defaultstate="collapsed" desc=" Gets / Sets ">
     public void setNumero(int numero) {
         this.numero = numero;
     }
@@ -51,5 +52,6 @@ public class RequestBagage implements Serializable {
     public boolean getValise() {
         return valise;
     }
+    //</editor-fold>
     
 }
