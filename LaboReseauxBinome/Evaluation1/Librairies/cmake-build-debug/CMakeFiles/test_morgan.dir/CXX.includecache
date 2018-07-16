@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/test.cpp
+cstdio
+-
+

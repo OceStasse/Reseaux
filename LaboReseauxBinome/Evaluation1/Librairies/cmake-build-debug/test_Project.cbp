@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="test_Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_Project">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_Project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_Project"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_Project/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_Project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_Project/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_hostInfo">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_hostInfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_hostInfo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_hostInfo/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_hostInfo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_hostInfo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_LoginCsvHandler">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_LoginCsvHandler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_LoginCsvHandler"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_LoginCsvHandler/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_LoginCsvHandler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_LoginCsvHandler/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Librairies">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/libLibrairies.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 Librairies"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Librairies/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/libLibrairies.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 Librairies/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_Properties">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_Properties" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_Properties"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_Properties/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_Properties" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_Properties/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_CsvHandler">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_CsvHandler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_CsvHandler"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_CsvHandler/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_CsvHandler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_CsvHandler/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_errnoException">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_errnoException" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_errnoException"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_errnoException/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_errnoException" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_errnoException/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_CsvException">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_CsvException" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_CsvException"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_CsvException/fast">
+				<Option output="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/test_CsvException" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_CsvException/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CIMP/CIMP.cpp">
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CIMP/CIMP.h">
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/CsvHandler.cpp">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/CsvHandler.h">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/LoginCsvHandler.cpp">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/LoginCsvHandler.h">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/LuggageCsvHandler.cpp">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/LuggageCsvHandler.h">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/LuggageDatabase.cpp">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/LuggageDatabase.h">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/TicketCsvHandler.cpp">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CSV/TicketCsvHandler.h">
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/CIMPException.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/CIMPException.h">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/CsvException.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/CsvException.h">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/ErrnoException.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/ErrnoException.h">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/HostException.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/HostException.h">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/PropertiesException.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/PropertiesException.h">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/SocketException.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Exceptions/SocketException.h">
+			<Option target="test_hostInfo"/>
+			<Option target="test_LoginCsvHandler"/>
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+			<Option target="test_CsvHandler"/>
+			<Option target="test_errnoException"/>
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Properties/Properties.cpp">
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Properties/Properties.h">
+			<Option target="Librairies"/>
+			<Option target="test_Properties"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/ClientSocket.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/ClientSocket.h">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/HostInfo.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/HostInfo.h">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/ServerSocket.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/ServerSocket.h">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/Socket.cpp">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/SocketUtilities/Socket.h">
+			<Option target="test_hostInfo"/>
+			<Option target="Librairies"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/CsvExceptionTest.cpp">
+			<Option target="test_CsvException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/CsvHandlerTest.cpp">
+			<Option target="test_CsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/ErrnoExceptionTest.cpp">
+			<Option target="test_errnoException"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/HostInfoTest.cpp">
+			<Option target="test_hostInfo"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/LoginCsvHandlerTest.cpp">
+			<Option target="test_LoginCsvHandler"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/PropertiesTest.cpp">
+			<Option target="test_Properties"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/Tests/test.cpp">
+			<Option target="test_Project"/>
+		</Unit>
+		<Unit filename="/Users/laurent/Dropbox/INPRES/3eme_info2/Reseaux/Labo/Evaluation1/Librairies/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
