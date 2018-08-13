@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP_logout.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP_updateFieldComments.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP_login.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP_getLuggages.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP_updateFieldCheckedByCustoms.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/LUGAP/src/lugap/requete/RequeteLUGAP_getFlights.java</file>
+        </group>
     </open-files>
 </project-private>
