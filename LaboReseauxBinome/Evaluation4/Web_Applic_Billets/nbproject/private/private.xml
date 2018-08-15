@@ -6,9 +6,16 @@
             <file>file:/C:/Users/Windows10/Dropbox/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/Windows10/Dropbox/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/src/java/ticket_booking/ControllerServlet.java</file>
         </group>
-        <group/>
         <group name="Reseaux">
             <file>file:/C:/Users/Windows10/Dropbox/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/web/WEB-INF/web.xml</file>
+        </group>
+        <group>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/src/java/ticket_booking/SessionServletListener.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/web/WEB-INF/JSPCaddie.jsp</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/web/WEB-INF/JSPPayment.jsp</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/web/WEB-INF/JSPInit.jsp</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/web/WEB-INF/JSPPay.jsp</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation4/Web_Applic_Billets/src/java/ticket_booking/ControllerServlet.java</file>
         </group>
     </open-files>
 </project-private>

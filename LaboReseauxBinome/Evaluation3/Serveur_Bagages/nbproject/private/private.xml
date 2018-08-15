@@ -2,7 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
         <group name="Reseaux"/>
+        <group>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/Serveur_Bagages/src/serveur_bagages/RunnableLUGAPM.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/Serveur_Bagages/src/serveur_bagages/ThreadPoolLUGAPM.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/Serveur_Bagages/src/serveur_bagages/JFrameServeurBagages.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/Serveur_Bagages/src/serveur_bagages/ThreadPoolLUGAP.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation3/Serveur_Bagages/src/serveur_bagages/RunnableLUGAP.java</file>
+        </group>
     </open-files>
 </project-private>

@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation5/IACOP/src/network/Message.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation5/IACOP/src/network/Reponse_LOGIN_GROUP.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation5/IACOP/src/network/Requete_LOGIN_GROUP.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation5/IACOP/src/network/MulticastCommunicator.java</file>
+            <file>file:/D:/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation5/IACOP/src/network/MulticastCommunicatorException.java</file>
+        </group>
     </open-files>
 </project-private>

@@ -15,7 +15,8 @@ public class ThreadPoolLUGAPM extends ThreadPool {
     private final String DBschema;
     private final String DBpassword;
 
-    public ThreadPoolLUGAPM(int nbThreads, SourceTaches tachesAExecuter, ConsoleServeur guiApplication, int port, String ip, String DBport, String SID, String schema, String password) {
+    public ThreadPoolLUGAPM(int nbThreads, SourceTaches tachesAExecuter, ConsoleServeur guiApplication, int port, String ip, String DBport, 
+            String SID, String schema, String password) {
         super(nbThreads, tachesAExecuter, guiApplication, port);
         
         this.DBip = ip;

@@ -15,7 +15,8 @@ public class ThreadPoolLUGAP extends ThreadPool {
     private final String DBschema;
     private final String DBpassword;
 
-    public ThreadPoolLUGAP(int nbThreads, SourceTaches tachesAExecuter, ConsoleServeur guiApplication, int port, String ip, String DBport, String SID, String schema, String password) {
+    public ThreadPoolLUGAP(int nbThreads, SourceTaches tachesAExecuter, ConsoleServeur guiApplication, int port, 
+            String ip, String DBport, String SID, String schema, String password) {
         super(nbThreads, tachesAExecuter, guiApplication, port);
         
         this.DBip = ip;
@@ -27,6 +28,7 @@ public class ThreadPoolLUGAP extends ThreadPool {
 
     @Override
     protected Runnable getProtocolRunnable(Socket socket) throws CommunicatorException{
-        return new RunnableLUGAP(this, this.guiApplication, new Communicator(socket), new DatabaseAccess(DatabaseAccess.databaseType.MYSQL, this.DBip, this.DBport, this.DBSID, this.DBschema, this.DBpassword));
+        return new RunnableLUGAP(this, this.guiApplication, new Communicator(socket), 
+                new DatabaseAccess(DatabaseAccess.databaseType.MYSQL, this.DBip, this.DBport, this.DBSID, this.DBschema, this.DBpassword));
     }
 }
