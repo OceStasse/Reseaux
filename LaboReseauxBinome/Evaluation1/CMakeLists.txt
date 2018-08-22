@@ -1,0 +1,69 @@
+# cmake_minimum_required(VERSION <specify CMake version here>)
+project(Evaluation1)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(Application_CheckIn)
+include_directories(Librairies/CIMP)
+include_directories(Librairies/CSV)
+include_directories(Librairies/Exceptions)
+include_directories(Librairies/Properties)
+include_directories(Librairies/SocketUtilities)
+include_directories(Serveur_CheckIn)
+
+add_executable(Evaluation1
+        Application_CheckIn/Application_CheckIn.cpp
+        Application_CheckIn/Application_CheckIn.h
+        Application_CheckIn/ClientException.cpp
+        Application_CheckIn/ClientException.h
+        Application_CheckIn/Launcher.cpp
+        Application_CheckIn/QuitApp.cpp
+        Application_CheckIn/QuitApp.h
+        Librairies/CIMP/CIMP.cpp
+        Librairies/CIMP/CIMP.h
+        Librairies/CSV/CsvHandler.cpp
+        Librairies/CSV/CsvHandler.h
+        Librairies/CSV/LoginCsvHandler.cpp
+        Librairies/CSV/LoginCsvHandler.h
+        Librairies/CSV/LuggageCsvHandler.cpp
+        Librairies/CSV/LuggageCsvHandler.h
+        Librairies/CSV/LuggageDatabase.cpp
+        Librairies/CSV/LuggageDatabase.h
+        Librairies/CSV/TicketCsvHandler.cpp
+        Librairies/CSV/TicketCsvHandler.h
+        Librairies/Exceptions/CIMPException.cpp
+        Librairies/Exceptions/CIMPException.h
+        Librairies/Exceptions/CsvException.cpp
+        Librairies/Exceptions/CsvException.h
+        Librairies/Exceptions/ErrnoException.cpp
+        Librairies/Exceptions/ErrnoException.h
+        Librairies/Exceptions/HostException.cpp
+        Librairies/Exceptions/HostException.h
+        Librairies/Exceptions/PropertiesException.cpp
+        Librairies/Exceptions/PropertiesException.h
+        Librairies/Exceptions/SocketException.cpp
+        Librairies/Exceptions/SocketException.h
+        Librairies/Properties/Properties.cpp
+        Librairies/Properties/Properties.h
+        Librairies/SocketUtilities/ClientSocket.cpp
+        Librairies/SocketUtilities/ClientSocket.h
+        Librairies/SocketUtilities/HostInfo.cpp
+        Librairies/SocketUtilities/HostInfo.h
+        Librairies/SocketUtilities/ServerSocket.cpp
+        Librairies/SocketUtilities/ServerSocket.h
+        Librairies/SocketUtilities/Socket.cpp
+        Librairies/SocketUtilities/Socket.h
+        Librairies/Tests/CsvExceptionTest.cpp
+        Librairies/Tests/CsvHandlerTest.cpp
+        Librairies/Tests/ErrnoExceptionTest.cpp
+        Librairies/Tests/HostInfoTest.cpp
+        Librairies/Tests/LoginCsvHandlerTest.cpp
+        Librairies/Tests/PropertiesTest.cpp
+        Librairies/Tests/test.cpp
+        Serveur_CheckIn/Launcher.cpp
+        Serveur_CheckIn/ServerException.cpp
+        Serveur_CheckIn/ServerException.h
+        Serveur_CheckIn/Serveur_CheckIn.cpp
+        Serveur_CheckIn/Serveur_CheckIn.h
+        Serveur_CheckIn/Serveur_CheckInThread.cpp
+        Serveur_CheckIn/Serveur_CheckInThread.h)
