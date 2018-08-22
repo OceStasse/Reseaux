@@ -1,0 +1,10 @@
+package network.crypto;
+
+public abstract class ACryptageAsymétrique {
+    
+    public static byte[] encrypt()
+    {
+	
+	return new byte[5];
+    }
+}

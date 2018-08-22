@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>reservation_billet.SessionServletListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ControleurServlet</servlet-name>
+        <servlet-class>reservation_billet.ControleurServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/login.html</url-pattern>
+        <url-pattern>/loginErr.html</url-pattern>
+        <url-pattern>/nouvelleUtilisateur.html</url-pattern>
+        <url-pattern>/nouvelleUtilisateurErr.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControleurServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            60
+        </session-timeout>
+    </session-config>
+</web-app>

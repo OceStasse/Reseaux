@@ -1,0 +1,3 @@
+#Tomcat publish data
+#Wed Aug 15 18:08:32 CEST 2018
+org.eclipse.jst.j2ee.server\:Librairie=WEB-INF/lib/Librairie.jar

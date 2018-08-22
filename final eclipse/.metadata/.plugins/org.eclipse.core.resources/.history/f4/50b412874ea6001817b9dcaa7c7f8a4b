@@ -1,0 +1,14 @@
+package network.crypto;
+
+import java.io.ByteArrayInputStream;
+import java.io.ObjectInputStream;
+
+public abstract class ConverterObject {
+    
+    static byte[] convertByteToObject(byte[] object) {
+	ByteArrayInputStream bais = new ByteArrayInputStream(object);
+        ObjectInputStream ois = new ObjectInputStream(bais);
+        return ois.readObject();
+    }
+    
+}

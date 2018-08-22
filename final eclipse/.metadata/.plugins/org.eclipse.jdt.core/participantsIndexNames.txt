@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\Documents\GitHub\Reseaux\final eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1706778041.index
+\ClientBilletWeb\src

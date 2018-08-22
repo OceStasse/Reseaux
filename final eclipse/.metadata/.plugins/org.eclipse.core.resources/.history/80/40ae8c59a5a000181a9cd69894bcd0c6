@@ -1,0 +1,5 @@
+package network.protocole.tickmap.requete;
+
+public class RequeteVols {
+
+}

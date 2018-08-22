@@ -1,0 +1,38 @@
+1534154981784	Delete element
+1534154996433	Delete element
+1534155003223	Delete element
+1534155987384	Encapsulate field 'transactionEnCours'
+1534156009225	Encapsulate field 'connection'
+1534156040750	Encapsulate field 'properties'
+1534156049279	Encapsulate field 'user'
+1534156082250	Encapsulate field 'pwd'
+1534156116982	Encapsulate field 'URL'
+1534156129812	Encapsulate field 'driver'
+1534158269938	Encapsulate field 'idAvion'
+1534158275357	Encapsulate field 'idCompagnieAvion'
+1534158282032	Encapsulate field 'departDate'
+1534158287330	Encapsulate field 'destination'
+1534158292490	Encapsulate field 'zoneGeographique'
+1534158295459	Encapsulate field 'distance'
+1534158300346	Encapsulate field 'heureDepart'
+1534158304667	Encapsulate field 'heureAtterisage'
+1534158309116	Encapsulate field 'place'
+1534158314996	Encapsulate field 'prix'
+1534158318184	Encapsulate field 'piste'
+1534159478060	Delete element
+1534161181896	Delete element
+1534163427906	Rename type 'LoginFrameParent'
+1534164129326	Rename package 'genericframe.login'
+1534164451759	Rename type 'ConsoleServeur'
+1534164461002	Rename type 'Reponse'
+1534164750448	Delete element
+1534194583250	Rename type 'Requete'
+1534235471073	Delete element
+1534237634621	Rename type 'Requete_lougout'
+1534239715950	Rename type 'PoolThreadLUGAP'
+1534263846462	Rename package 'network.protocole.iacop'
+1534263907882	Rename type 'Reponse_login_group'
+1534266115062	Delete element
+1534286771357	Delete element
+1534345793374	Move compilation unit
+1534349266736	Delete element

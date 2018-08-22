@@ -1,0 +1,16 @@
+package network.crypto;
+
+import java.security.InvalidKeyException;
+import java.security.PublicKey;
+
+import javax.crypto.Cipher;
+
+public abstract class ACryptageAsymétrique {
+    
+    public static byte[] encrypt(Cipher cipher, byte[] req, PublicKey key) throws InvalidKeyException
+    {
+	cipher.init(Cipher.ENCRYPT_MODE, key);
+	
+	return cipher.doFinal(req);
+    }
+}

@@ -1,0 +1,7 @@
+package network.protocole.tickmap.reponse;
+
+import generic.server.AReponse;
+
+public class ReponseCertificat extends AReponse {
+
+}

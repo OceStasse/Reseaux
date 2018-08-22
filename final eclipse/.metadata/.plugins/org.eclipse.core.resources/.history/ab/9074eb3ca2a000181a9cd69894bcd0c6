@@ -1,0 +1,30 @@
+package network.protocole.tickmap.requete;
+
+import java.io.Serializable;
+
+import generic.server.ARequete;
+
+public class RequeteLogin extends ARequete implements Serializable {
+    private final String login;
+    private final byte[] digestedPassword;
+    private final long time;
+    private final double rand;
+    
+    public RequeteLogin(String login, byte[] digestedPassword, long time, double rand) {
+	super("login", "SELECT login, password "
+		+ "FROM agent INNER JOIN job "
+		+ "ON fk_idjob = idjob "
+		+ "WHERE agent.login = ?");
+
+	this.login = login;
+	this.digestedPassword = digestedPassword;
+	this.time = time;
+	this.rand = rand;
+    }
+    @Override
+    protected void doAction() {
+	// TODO Auto-generated method stub
+
+    }
+
+}
