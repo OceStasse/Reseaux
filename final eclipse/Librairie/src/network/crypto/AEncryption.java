@@ -45,4 +45,14 @@ public abstract class AEncryption {
         return saltDigest(Arrays.toString(message), time, rand);
     }
     
+    public static int hash(String message){
+		int hashValue = 0;
+
+		for(int i=0; i<message.length(); i++){
+			hashValue += (int)message.charAt(i);
+		}
+
+		return hashValue%67;
+	}
+    
 }

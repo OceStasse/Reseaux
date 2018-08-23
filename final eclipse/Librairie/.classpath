@@ -6,7 +6,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="D:/Documents/GitHub/Reseaux/final eclipse/ressources/bcprov-jdk15on-158.jar">
+	<classpathentry kind="lib" path="D:/Documents/GitHub/Reseaux/Reseaux/final eclipse/ressources/bcprov-jdk15on-158.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
 		</attributes>
