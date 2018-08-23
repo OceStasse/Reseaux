@@ -17,6 +17,13 @@ public abstract class AEncryption {
     {
         Security.addProvider(new BouncyCastleProvider());
     }
+
+    @SuppressWarnings("unused")
+    private long time;
+    @SuppressWarnings("unused")
+	private double rand;
+    @SuppressWarnings("unused")
+    private byte[] msgByte;
     
     public static byte[] saltDigest(String message, long time, double rand) throws EncryptionException
     {
