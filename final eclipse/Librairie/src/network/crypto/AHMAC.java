@@ -20,32 +20,53 @@ public abstract class AHMAC {
         Security.addProvider(new BouncyCastleProvider());
     }
     
-    public static byte[] hash(Mac hmac,SecretKey secretKey, ARequete req) throws InvalidKeyException, IllegalStateException, IOException
+    public static byte[] hash(Mac hmac,SecretKey secretKey, ARequete req) throws HMACException 
     {
-	hmac.init(secretKey);
-	hmac.update(ConverterObject.convertObjectToByte(req));
-	return  hmac.doFinal();
+    	
+    	try {
+    		hmac.init(secretKey);
+			hmac.update(ConverterObject.convertObjectToByte(req));
+			
+		} catch (IllegalStateException | IOException | InvalidKeyException e) {
+			
+			throw new HMACException("HMAC()->hash(): " + e);
+		}
+    	return  hmac.doFinal();
+    	
     }
-    
-    public static byte[] hash(String algo,String provider,SecretKey secretKey, ARequete req) throws InvalidKeyException, IllegalStateException, 
-    	IOException, NoSuchAlgorithmException, NoSuchProviderException
+
+    public static byte[] hash(String algo,String provider,SecretKey secretKey, ARequete req) throws HMACException 
     {
-	Mac hmac = Mac.getInstance(algo, provider); 
-	return hash(hmac, secretKey, req);
+    	Mac hmac;
+		try {
+			hmac = Mac.getInstance(algo, provider);
+		} catch (NoSuchAlgorithmException | NoSuchProviderException e) {
+			throw new HMACException("HMAC()->hash()->Mac.getInstance: " + e);
+		} 
+    	return hash(hmac, secretKey, req);
     }
-    
-    public static boolean verify(Mac hmac,byte[] receivedHashed, byte[] message, SecretKey secretKey) throws InvalidKeyException
+
+    public static boolean verify(Mac hmac,byte[] receivedHashed, byte[] message, SecretKey secretKey) throws HMACException 
     {
-	hmac.init(secretKey);
-        hmac.update(message);
-        byte[] generatedHashed = hmac.doFinal();        
-	return MessageDigest.isEqual(generatedHashed, receivedHashed);
+    	try {
+			hmac.init(secretKey);
+		} catch (InvalidKeyException e) {
+			throw new HMACException("HMAC()->verify()->hmac.init: " + e);
+		}
+    	hmac.update(message);
+    	byte[] generatedHashed = hmac.doFinal();        
+    	return MessageDigest.isEqual(generatedHashed, receivedHashed);
     }
-    
-    public static boolean verify(String algo,String provider,byte[] receivedHashed, byte[] message, SecretKey secretKey) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchProviderException
+
+    public static boolean verify(String algo,String provider,byte[] receivedHashed, byte[] message, SecretKey secretKey) throws HMACException 
     {
-	Mac hmac = Mac.getInstance(algo, provider); 
-	return verify(hmac, receivedHashed, message, secretKey) ;
+    	Mac hmac;
+		try {
+			hmac = Mac.getInstance(algo, provider);
+		} catch (NoSuchAlgorithmException | NoSuchProviderException e) {
+			throw new HMACException("HMAC()->verify()-> mac:" + e);
+		} 
+    	return verify(hmac, receivedHashed, message, secretKey) ;
     }
     
 }

@@ -1,1 +1,16 @@
-Visual Studio not found at: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community Configure
+C:\Users\nicol\.CLion2018.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/d/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation1
+CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+CMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.12)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring incomplete, errors occurred!
+See also "/cygdrive/d/Documents/GitHub/Reseaux/Reseaux/LaboReseauxBinome/Evaluation1/cmake-build-debug/CMakeFiles/CMakeOutput.log".
