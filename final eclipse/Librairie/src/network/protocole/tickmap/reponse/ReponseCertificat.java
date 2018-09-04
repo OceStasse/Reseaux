@@ -9,8 +9,8 @@ public class ReponseCertificat extends AReponse {
     private X509Certificate certificate;
     
     protected ReponseCertificat(String message,boolean successful, X509Certificate cert) {
-	super(message, successful);
-	this.certificate = cert;
+		super(message, successful);
+		this.certificate = cert;
     }
 
     /**

@@ -12,11 +12,12 @@ import network.communication.Communication;
 import network.communication.communicationException;
 import network.protocole.tickmap.reponse.ReponseCertificat;
 import network.protocole.tickmap.reponse.ReponseLogin;
-import network.protocole.tickmap.requete.RequeteBillet;
+import network.protocole.tickmap.requete.RequeteCaddie;
 import network.protocole.tickmap.requete.RequeteCertificate;
 import network.protocole.tickmap.requete.RequeteExchangeKey;
 import network.protocole.tickmap.requete.RequeteLogin;
 import network.protocole.tickmap.requete.RequeteLogout;
+import network.protocole.tickmap.requete.RequeteReserver;
 import network.protocole.tickmap.requete.RequeteVol;
 
 public class RunnableTickimap  implements Runnable{
@@ -105,9 +106,21 @@ public class RunnableTickimap  implements Runnable{
                 		previousRequete = RequeteVol.class;
                 	}
                 }
-                else if(req instanceof RequeteBillet)
+                else if(req instanceof RequeteReserver)
                 {
-                	
+                	runnable.run();
+                	if(req.requeteSucceeded())
+                	{
+                		previousRequete = RequeteReserver.class;
+                	}
+                }
+                else if (req instanceof RequeteCaddie)
+                {
+                	runnable.run();
+                	if(req.requeteSucceeded())
+                	{
+                		previousRequete = RequeteCaddie.class;
+                	}
                 }
 			}
 			this.db.commit();
@@ -119,7 +132,7 @@ public class RunnableTickimap  implements Runnable{
 		{
 			this.guiApplication.TraceEvenements(this.c.getSocket().getRemoteSocketAddress().toString()
                     + "#" + ex.getMessage()
-                    + "#LUGAPRunnable");
+                    + "#RunnableTICKIMAP");
 		}
 		
 		

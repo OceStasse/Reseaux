@@ -409,34 +409,35 @@ public class ControleurServlet extends HttpServlet {
 			    + "   AND departure=?"
 			    + "   AND destination=?";
 
-		    if(this.db.executeUpdate(sql, preparedMap ) == 1 ){
-			//Si on a déjà réservé des places pour ce vol, on update le nombre
-			preparedMap.put(5, session.getAttribute("idcaddie"));
-			sql = "SELECT iditem, reservedSeats"
-				+ " FROM " + this.DB_TABLE_RESERVATION
-				+ " WHERE fk_idairplane=?"
-				+ "   AND fk_idairline=?"
-				+ "   AND fk_departure=?"
-				+ "   AND fk_destination=?"
-				+ "   AND fk_idcaddie=?"
-				+ " FOR UPDATE";
-			resultSet = this.db.executeQuery(sql, preparedMap);
-
-			if(resultSet.next()){
-			    sql = "UPDATE " + this.DB_TABLE_RESERVATION
-				    + " SET reservedSeats = " + (resultSet.getInt("reservedSeats") + Integer.valueOf(request.getParameter("rsvNbr")))
-				    + " WHERE iditem=" + resultSet.getInt("iditem");
-			}
-			else{
-			    preparedMap.put(6, Integer.valueOf(request.getParameter("rsvNbr")));
-			    sql = "INSERT INTO " + this.DB_TABLE_RESERVATION
-				    + " (`fk_idairplane`, `fk_idairline`, `fk_departure`, `fk_destination`, `fk_idcaddie`, `reservedSeats`)"
-				    + " VALUES(?, ?, ?, ?, ?, ?)";
-			}
-			if( this.db.executeUpdate(sql, preparedMap) == 1)
-			    this.db.commit();
-			else
-			    this.db.rollback();
+		    if(this.db.executeUpdate(sql, preparedMap ) == 1 )
+		    {
+				//Si on a déjà réservé des places pour ce vol, on update le nombre
+				preparedMap.put(5, session.getAttribute("idcaddie"));
+				sql = "SELECT iditem, reservedSeats"
+					+ " FROM " + this.DB_TABLE_RESERVATION
+					+ " WHERE fk_idairplane=?"
+					+ "   AND fk_idairline=?"
+					+ "   AND fk_departure=?"
+					+ "   AND fk_destination=?"
+					+ "   AND fk_idcaddie=?"
+					+ " FOR UPDATE";
+				resultSet = this.db.executeQuery(sql, preparedMap);
+	
+				if(resultSet.next()){
+				    sql = "UPDATE " + this.DB_TABLE_RESERVATION
+					    + " SET reservedSeats = " + (resultSet.getInt("reservedSeats") + Integer.valueOf(request.getParameter("rsvNbr")))
+					    + " WHERE iditem=" + resultSet.getInt("iditem");
+				}
+				else{
+				    preparedMap.put(6, Integer.valueOf(request.getParameter("rsvNbr")));
+				    sql = "INSERT INTO " + this.DB_TABLE_RESERVATION
+					    + " (`fk_idairplane`, `fk_idairline`, `fk_departure`, `fk_destination`, `fk_idcaddie`, `reservedSeats`)"
+					    + " VALUES(?, ?, ?, ?, ?, ?)";
+				}
+				if( this.db.executeUpdate(sql, preparedMap) == 1)
+				    this.db.commit();
+				else
+				    this.db.rollback();
 		    }
 		    else
 			this.db.rollback();
