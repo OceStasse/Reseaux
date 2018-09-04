@@ -13,5 +13,15 @@ public class ReponsePassenger extends AReponse {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
+	public static ReponsePassenger OK()
+	{
+		return new ReponsePassenger("",true);
+	}
+	
+	public static ReponsePassenger KO(String msg)
+	{
+		return new ReponsePassenger(msg,false);
+	}
+	
 }

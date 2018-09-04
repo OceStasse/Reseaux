@@ -14,6 +14,7 @@ import javax.crypto.SecretKey;
 
 import database.entities.Passenger;
 import generic.server.ASecureSymetricRequete;
+import network.communication.communicationException;
 import network.crypto.ACryptographieSymetrique;
 import network.crypto.ConverterObject;
 import network.crypto.CryptographieSymetriqueException;
@@ -77,12 +78,16 @@ public class RequetePassenger extends ASecureSymetricRequete {
 		} catch (ClassNotFoundException | NoSuchAlgorithmException | NoSuchProviderException | NoSuchPaddingException
 				| IOException | CryptographieSymetriqueException e) {
 			traceEvent("Error Cryptage: " + e.getMessage());
-			this.communication.send(ReponsePassenger.KO("Error Base de donnée"));
+			try {
+				this.communication.send(ReponsePassenger.KO("Error Base de donnée"));
+			} catch (communicationException e1) {
+				e1.printStackTrace();
+			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (communicationException e) {
 			e.printStackTrace();
 		}
 	}
