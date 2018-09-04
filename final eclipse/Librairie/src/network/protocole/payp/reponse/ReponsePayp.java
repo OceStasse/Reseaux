@@ -16,8 +16,14 @@ public class ReponsePayp extends AReponse
 	private String _proprioName;
 	private int _transactionMontant;
 	
+	private byte[] _signature;
 	
-	
+	public byte[] get_signature() {
+		return _signature;
+	}
+	public void set_signature(byte[] _signature) {
+		this._signature = _signature;
+	}
 	public ReponsePayp()
 	{
 		super("",true);
@@ -25,22 +31,23 @@ public class ReponsePayp extends AReponse
 		this.set_proprioName("neant");
 		this.set_transactionMontant(0);
 	}
-	public ReponsePayp(String creditCard,String proprio, int montant,String message,boolean success)
+	public ReponsePayp(String creditCard,String proprio, int montant,byte[] signature,String message,boolean success)
 	{
 		super(message,success);
 		this.set_creditCard(creditCard);
 		this.set_proprioName(proprio);
 		this.set_transactionMontant(montant);
+		this.set_signature(signature);
 	}
 	
 	public static ReponsePayp OK(ReponsePayp rep)
 	{
-		return new ReponsePayp(rep.get_creditCard(),rep.get_proprioName(),rep.get_transactionMontant(),"",true);
+		return new ReponsePayp(rep.get_creditCard(),rep.get_proprioName(),rep.get_transactionMontant(),rep.get_signature(),"",true);
 	}
 	
 	public static ReponsePayp KO(ReponsePayp rep)
 	{
-		return new ReponsePayp(rep.get_creditCard(),rep.get_proprioName(),rep.get_transactionMontant(),"",false);
+		return new ReponsePayp(rep.get_creditCard(),rep.get_proprioName(),rep.get_transactionMontant(),rep.get_signature(),"",false);
 	}
 	
 	

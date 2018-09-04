@@ -1,6 +1,7 @@
 package generic.server;
 
 import java.security.PrivateKey;
+import java.security.PublicKey;
 
 import javax.crypto.SecretKey;
 
@@ -11,7 +12,36 @@ public abstract class ASecureAsymetricRequete extends ARequete implements ISecur
 {
 
 	
-	private PrivateKey key;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private PrivateKey keyPrivate;
+	private PublicKey keyPublic;
+	public PrivateKey getKeyPrivate() {
+		return keyPrivate;
+	}
+
+
+
+	public void setKeyPrivate(PrivateKey keyPrivate) {
+		this.keyPrivate = keyPrivate;
+	}
+
+
+
+	public PublicKey getKeyPublic() {
+		return keyPublic;
+	}
+
+
+
+	public void setKeyPublic(PublicKey keyPublic) {
+		this.keyPublic = keyPublic;
+	}
+
+
+
 	protected ASecureAsymetricRequete(String requestTypeName, String sqlStatement) {
 		super(requestTypeName, sqlStatement);
 		// TODO Auto-generated constructor stub
@@ -21,12 +51,13 @@ public abstract class ASecureAsymetricRequete extends ARequete implements ISecur
     
     @Override
 	public Runnable createRunnable(Runnable parent, Communication c, IConsoleServeur consoleServeur, Access db,
-			PrivateKey key) {
+			PrivateKey key,PublicKey keyPublic) {
     	this.parent = parent;
         this.communication = c;
         this.consoleServeur = consoleServeur;
         this.database = db;
-        this.setKey(key);
+        this.setKeyPrivate(key);
+        this.setKeyPublic(keyPublic);
         return () -> { doAction(); };
 	}
 
@@ -41,19 +72,5 @@ public abstract class ASecureAsymetricRequete extends ARequete implements ISecur
     
 	@Override
 	protected abstract void doAction() ;
-
-
-
-
-	public PrivateKey getKey() {
-		return key;
-	}
-
-
-
-
-	public void setKey(PrivateKey key) {
-		this.key = key;
-	}
 
 }
