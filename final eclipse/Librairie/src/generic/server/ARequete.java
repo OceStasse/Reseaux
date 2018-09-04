@@ -16,7 +16,7 @@ public abstract class ARequete implements Serializable, IRequete {
     protected IConsoleServeur consoleServeur;
     protected Access database;
     
-    private final String requestTypeName;
+    protected final String requestTypeName;
     protected final String sqlStatement;
     protected AReponse reponse;
     

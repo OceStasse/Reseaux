@@ -32,54 +32,45 @@ public class RequeteVol extends ARequete {
 	@Override
 	protected void doAction() {
 		ArrayList<Vol> vols = new ArrayList<Vol>();
-		PrivateKey key;
-		try {
-			key = ACryptographieAsymetrique.privateKey("  ", "  ", "  ", "  " , "  ");
+		try
+		{
 			try
 			{
-				try
+				ResultSet result = this.database.executeQuery(this.sqlStatement);
+				System.out.println("\nToday's flights are : ");
+				while(result.next())
 				{
-					ResultSet result = this.database.executeQuery(this.sqlStatement);
-					System.out.println("\nToday's flights are : ");
-					while(result.next())
-					{
-						Vol vol = new Vol(result.getInt("fk_idairplane"),
-								result.getString("fk_idairline"),
-								result.getDate("departure"),
-								result.getString("destination"),
-								result.getString("fk_idgeographiczone"),
-								result.getInt("distance"),
-								result.getTime("takeOffTime"),
-								result.getTime("scheduledLanding"),
-								result.getInt("seatsSold"),
-								result.getDouble("price"),
-								result.getString("piste")
-	                        );
-						vols.add(vol);
-						System.out.println("    Flight n°" + vols.size() + " : " + vol.toString());
-					}
-					System.out.println("-------");
-					this.reponse = ReponseVols.OK(vols,key);
-	                traceEvent("GetFlight OK (flights found : " + vols.size() + ")");
+					Vol vol = new Vol(result.getInt("fk_idairplane"),
+							result.getString("fk_idairline"),
+							result.getDate("departure"),
+							result.getString("destination"),
+							result.getString("fk_idgeographiczone"),
+							result.getInt("distance"),
+							result.getTime("takeOffTime"),
+							result.getTime("scheduledLanding"),
+							result.getInt("seatsSold"),
+							result.getDouble("price"),
+							result.getString("piste")
+							);
+					vols.add(vol);
+					System.out.println("    Flight n°" + vols.size() + " : " + vol.toString());
 				}
-				catch(SQLException | SignatureException | IOException e)
-				{
-					this.reponse = ReponseVols.KO("Erreur Serveur (SQL)",key);
-	                traceEvent("Erreur SQL/BDD : " + e.getMessage());
-				}
-				
-				this.communication.send(this.reponse);
+				System.out.println("-------");
+				this.reponse = ReponseVols.OK(vols);
+				traceEvent("GetFlight OK (flights found : " + vols.size() + ")");
 			}
-			catch(communicationException ex)
+			catch(SQLException e)
 			{
-				traceEvent("GetFlight" + ex.getMessage());
+				this.reponse = ReponseVols.KO("Erreur Serveur (SQL)");
+				traceEvent("Erreur SQL/BDD : " + e.getMessage());
 			}
-		} catch (CryptographieAsymetriqueException | SignatureException | IOException e1) {
-			this.reponse = ReponseVols.KO("ERROR Certificate");
-			traceEvent("GetFlight-> don't load keystore" + e1.getMessage());
-		}
-		
 
+			this.communication.send(this.reponse);
+		}
+		catch(communicationException ex)
+		{
+			traceEvent("GetFlight" + ex.getMessage());
+		}
 	}
 
 }

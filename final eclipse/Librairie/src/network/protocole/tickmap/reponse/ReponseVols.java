@@ -1,14 +1,8 @@
 package network.protocole.tickmap.reponse;
 
-import java.io.IOException;
-import java.security.PrivateKey;
 import java.util.ArrayList;
-
 import database.entities.Vol;
 import generic.server.AReponse;
-import network.crypto.ASignature;
-import network.crypto.ConverterObject;
-import network.crypto.SignatureException;
 
 public class ReponseVols extends AReponse {
 	

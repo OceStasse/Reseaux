@@ -12,6 +12,7 @@ import network.communication.Communication;
 import network.communication.communicationException;
 import network.protocole.tickmap.reponse.ReponseCertificat;
 import network.protocole.tickmap.reponse.ReponseLogin;
+import network.protocole.tickmap.requete.RequeteBillet;
 import network.protocole.tickmap.requete.RequeteCertificate;
 import network.protocole.tickmap.requete.RequeteExchangeKey;
 import network.protocole.tickmap.requete.RequeteLogin;
@@ -104,11 +105,15 @@ public class RunnableTickimap  implements Runnable{
                 		previousRequete = RequeteVol.class;
                 	}
                 }
-                else if(req instanceof)
+                else if(req instanceof RequeteBillet)
                 {
                 	
                 }
 			}
+			this.db.commit();
+			this.guiApplication.TraceEvenements(this.c.getSocket().getRemoteSocketAddress().toString()
+                    + "#Commit successful"
+                    + "#RunnableTICKIMAP");
 		}
 		catch(communicationException | SQLException ex)
 		{
