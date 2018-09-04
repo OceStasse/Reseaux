@@ -17,6 +17,7 @@ public class ReponseCertificat extends AReponse {
      * 
      */
     private static final long serialVersionUID = 1L;
+    
     public static ReponseCertificat OK(X509Certificate cert){
         return new ReponseCertificat("", true,cert);
     }
@@ -26,10 +27,6 @@ public class ReponseCertificat extends AReponse {
     }
 
     public X509Certificate getCertificate() {
-	return certificate;
-    }
-
-    public void setCertificate(X509Certificate certificate) {
-	this.certificate = certificate;
+    	return certificate;
     }
 }

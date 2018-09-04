@@ -37,35 +37,35 @@ public class RequeteLogin extends ARequete implements Serializable {
     }
     @Override
     protected void doAction() {
-	Map<Integer, Object> statementMap = new HashMap<Integer, Object>();
-         statementMap.put(1, this.login);
-	try {
-	    try {
-		ResultSet resultSet = this.database.executeQuery(this.sqlStatement, statementMap);
+    	Map<Integer, Object> statementMap = new HashMap<Integer, Object>();
+    	statementMap.put(1, this.login);
+    	try {
+    		try {
+    			ResultSet resultSet = this.database.executeQuery(this.sqlStatement, statementMap);
 
-		if(!resultSet.next()|| !Arrays.equals(this.digestedPassword,
-			AEncryption.saltDigest(resultSet.getString("password"),
-				this.time,
-				this.rand))){
-		    this.reponse = ReponseLogin.KO("Wrong login/password");
-		    traceEvent("Wrong login/password (login:" + this.login + ")");
-		}
-		else{
-		    this.reponse = ReponseLogin.OK();
-		    traceEvent("Login OK (login: " + this.login + ")");
-		}
-	    } catch (SQLException ex) {
-		this.reponse = ReponseLogin.KO("Erreur Serveur (SQL)");
-		traceEvent("Erreur SQL/BDD : " + ex.getMessage());
-	    } catch (EncryptionException ex) {
-		this.reponse = ReponseLogin.KO("Erreur Serveur (Encrypt)");
-		traceEvent("Erreur d'encrypt : " + ex.getMessage());
-	    }
+    			if(!resultSet.next()|| !Arrays.equals(this.digestedPassword,
+    					AEncryption.saltDigest(resultSet.getString("password"),
+    							this.time,
+    							this.rand))){
+    				this.reponse = ReponseLogin.KO("Wrong login/password");
+    				traceEvent("Wrong login/password (login:" + this.login + ")");
+    			}
+    			else{
+    				this.reponse = ReponseLogin.OK();
+    				traceEvent("Login OK (login: " + this.login + ")");
+    			}
+    		} catch (SQLException ex) {
+    			this.reponse = ReponseLogin.KO("Erreur Serveur (SQL)");
+    			traceEvent("Erreur SQL/BDD : " + ex.getMessage());
+    		} catch (EncryptionException ex) {
+    			this.reponse = ReponseLogin.KO("Erreur Serveur (Encrypt)");
+    			traceEvent("Erreur d'encrypt : " + ex.getMessage());
+    		}
 
-	    this.communication.send(this.reponse);
-	} catch (communicationException ex) {
-	    traceEvent("Login : " + ex.getMessage());
-	}
+    		this.communication.send(this.reponse);
+    	} catch (communicationException ex) {
+    		traceEvent("Login : " + ex.getMessage());
+    	}
     }
 
 }

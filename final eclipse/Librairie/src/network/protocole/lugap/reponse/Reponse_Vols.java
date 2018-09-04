@@ -11,8 +11,8 @@ public class Reponse_Vols extends AReponse implements Serializable {
     private ArrayList<Vol> vols;
     
     protected Reponse_Vols(String message, boolean successful, ArrayList<Vol> vols) {
-	super(message, successful);
-	this.vols = vols;
+		super(message, successful);
+		this.vols = vols;
     }
     
     public static Reponse_Vols OK(ArrayList<Vol> flights){
@@ -27,9 +27,6 @@ public class Reponse_Vols extends AReponse implements Serializable {
         return vols;
     }
 
-    /**
-     * 
-     */
     private static final long serialVersionUID = 1L;
 
 }
