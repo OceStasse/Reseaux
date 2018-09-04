@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import database.entities.Vol;
 import generic.server.ARequete;
 import network.communication.communicationException;
-import network.crypto.ACryptographieAsymetrique;
-import network.crypto.CryptographieAsymetriqueException;
 import network.crypto.SignatureException;
 import network.protocole.tickmap.reponse.ReponseVols;
 
