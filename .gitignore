@@ -2,5 +2,9 @@
 /part_3/Application_Bagages/build/
 /part_3/Application_Bagages/dist/
 /.metadata/
+<<<<<<< HEAD
 /Nouveau dossier/AppBillet/nbproject/private/
 /Nouveau dossier/AppBillet/build/
+=======
+/.recommenders/
+>>>>>>> 1dfc2bb693b1cff7f2d68c981da0fa8698655e32

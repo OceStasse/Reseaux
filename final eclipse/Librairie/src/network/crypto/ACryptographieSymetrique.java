@@ -40,5 +40,15 @@ public abstract class ACryptographieSymetrique {
 		}
 	}
 	
+	public static byte[] decrypt(Cipher cipher,byte[] req, SecretKey key) throws CryptographieSymetriqueException
+	{
+		try {
+			cipher.init(Cipher.DECRYPT_MODE, key);
+	        return cipher.doFinal(req);
+		} catch (InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {
+			throw new CryptographieSymetriqueException("ACryptographieSymetrique()->decrypt()");
+		}
+	}
+	
 	
 }

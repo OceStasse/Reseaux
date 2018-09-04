@@ -26,12 +26,13 @@ public abstract class AHMAC {
     	try {
     		hmac.init(secretKey);
 			hmac.update(ConverterObject.convertObjectToByte(req));
+			return  hmac.doFinal();
 			
 		} catch (IllegalStateException | IOException | InvalidKeyException e) {
 			
 			throw new HMACException("HMAC()->hash(): " + e);
 		}
-    	return  hmac.doFinal();
+    	
     	
     }
 
@@ -50,12 +51,12 @@ public abstract class AHMAC {
     {
     	try {
 			hmac.init(secretKey);
+	    	hmac.update(message);
+	    	byte[] generatedHashed = hmac.doFinal();        
+	    	return MessageDigest.isEqual(generatedHashed, receivedHashed);
 		} catch (InvalidKeyException e) {
 			throw new HMACException("HMAC()->verify()->hmac.init: " + e);
 		}
-    	hmac.update(message);
-    	byte[] generatedHashed = hmac.doFinal();        
-    	return MessageDigest.isEqual(generatedHashed, receivedHashed);
     }
 
     public static boolean verify(String algo,String provider,byte[] receivedHashed, byte[] message, SecretKey secretKey) throws HMACException 

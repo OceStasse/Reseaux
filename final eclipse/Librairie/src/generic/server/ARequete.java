@@ -16,7 +16,7 @@ public abstract class ARequete implements Serializable, IRequete {
     protected IConsoleServeur consoleServeur;
     protected Access database;
     
-    private final String requestTypeName;
+    protected final String requestTypeName;
     protected final String sqlStatement;
     protected AReponse reponse;
     
@@ -27,7 +27,7 @@ public abstract class ARequete implements Serializable, IRequete {
     
     @Override
     public Runnable createRunnable(Runnable parent, Communication c, IConsoleServeur consoleServeur, Access db) {
-	this.parent = parent;
+    	this.parent = parent;
         this.communication = c;
         this.consoleServeur = consoleServeur;
         this.database = db;

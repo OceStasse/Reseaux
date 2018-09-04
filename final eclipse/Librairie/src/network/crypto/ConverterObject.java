@@ -8,14 +8,14 @@ import java.io.ObjectOutputStream;
 
 public abstract class ConverterObject {
     
-    static byte[] convertObjectToByte(Object object) throws IOException {
+    public static byte[] convertObjectToByte(Object object) throws IOException {
 	ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(baos);
         oos.writeObject(object);
         return baos.toByteArray();
     }
     
-    static Object convertByteToObject(byte[] byteArray) throws IOException, ClassNotFoundException
+    public static Object convertByteToObject(byte[] byteArray) throws IOException, ClassNotFoundException
     {
 	ByteArrayInputStream bais = new ByteArrayInputStream(byteArray);
         ObjectInputStream ois = new ObjectInputStream(bais);
