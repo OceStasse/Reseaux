@@ -12,12 +12,12 @@ import java.util.Map;
 import javax.crypto.NoSuchPaddingException;
 
 import database.entities.Caddie;
-import generic.server.ASecureSymetricRequete;
+import generic.server.ASecureRequete;
 import network.communication.communicationException;
 import network.crypto.CryptographieSymetriqueException;
 import network.protocole.tickmap.reponse.ReponseCaddie;
 
-public class RequeteCaddie extends ASecureSymetricRequete {
+public class RequeteCaddie extends ASecureRequete {
 
 	private static final long serialVersionUID = 1L;
 	private int idpassenger;
@@ -68,7 +68,7 @@ public class RequeteCaddie extends ASecureSymetricRequete {
 						caddie.setIdPassenger(resultSet.getInt("fk_idpassenger"));
 						// reponse ok
 						this.database.commit();
-						this.communication.send(ReponseCaddie.OK(caddie, this.getKey()));
+						this.communication.send(ReponseCaddie.OK(caddie, this.getKeySecret()));
 					}
 					else
 					{
@@ -85,7 +85,7 @@ public class RequeteCaddie extends ASecureSymetricRequete {
 				}
 				
 			}
-			this.communication.send(ReponseCaddie.OK(caddie, this.getKey()));
+			this.communication.send(ReponseCaddie.OK(caddie, this.getKeySecret()));
 		} catch (SQLException | InterruptedException e) {
 			traceEvent("error database: " + e.getMessage());
 			try {

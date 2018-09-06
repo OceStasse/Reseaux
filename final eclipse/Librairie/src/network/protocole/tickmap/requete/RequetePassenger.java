@@ -13,14 +13,14 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
 import database.entities.Passenger;
-import generic.server.ASecureSymetricRequete;
+import generic.server.ASecureRequete;
 import network.communication.communicationException;
 import network.crypto.ACryptographieSymetrique;
 import network.crypto.ConverterObject;
 import network.crypto.CryptographieSymetriqueException;
 import network.protocole.tickmap.reponse.ReponsePassenger;
 
-public class RequetePassenger extends ASecureSymetricRequete {
+public class RequetePassenger extends ASecureRequete {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -43,7 +43,7 @@ public class RequetePassenger extends ASecureSymetricRequete {
 		// decrypt
 		Passenger passenger;
 		try {
-			passenger = (Passenger) ConverterObject.convertByteToObject(ACryptographieSymetrique.decrypt(Cipher.getInstance("DES/ECB/PKCS5Padding","BC"), encryptPassenger, this.getKey()));
+			passenger = (Passenger) ConverterObject.convertByteToObject(ACryptographieSymetrique.decrypt(Cipher.getInstance("DES/ECB/PKCS5Padding","BC"), encryptPassenger, this.getKeySecret()));
 			
 			String sql = "select idpassenger, lastname, birthday, gender,firstname,login,password"+
 								"from passenger"+

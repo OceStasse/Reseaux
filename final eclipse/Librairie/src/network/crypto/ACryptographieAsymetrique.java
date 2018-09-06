@@ -47,15 +47,6 @@ public abstract class ACryptographieAsymetrique {
 
 		
 	}
-
-	public static byte[] encrypt(String algo, String provinder, byte[] req, PublicKey key) throws CryptographieAsymetriqueException
-	{
-		try {
-			return encrypt(Cipher.getInstance(algo, provinder),req,key);
-		} catch (NoSuchAlgorithmException | NoSuchProviderException | NoSuchPaddingException e) {
-			throw new CryptographieAsymetriqueException("CryptageAsymetrique()->encrypt()" + e);
-		}
-	}
 	
 	public static byte[] decrypt(Cipher cipher, byte[] req, PrivateKey key) throws CryptographieAsymetriqueException 
 	{

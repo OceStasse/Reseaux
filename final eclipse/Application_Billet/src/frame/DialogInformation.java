@@ -11,10 +11,6 @@ import javax.swing.SpringLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import javax.swing.SwingConstants;
-import javax.swing.JSeparator;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPasswordField;
@@ -23,7 +19,11 @@ import java.awt.event.ActionEvent;
 
 public class DialogInformation extends JDialog {
 
-    private final JPanel contentPanel = new JPanel();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final JPanel contentPanel = new JPanel();
     private JTextField textVolVoyageur;
     private JLabel labelVol;
     private JTextField textId;
@@ -143,7 +143,7 @@ public class DialogInformation extends JDialog {
 	lblGenre.setFont(new Font("Monospaced", Font.BOLD, 14));
 	contentPanel.add(lblGenre);
 	
-	JComboBox BoxGenre = new JComboBox();
+	JComboBox<?> BoxGenre = new JComboBox();
 	sl_contentPanel.putConstraint(SpringLayout.NORTH, BoxGenre, -1, SpringLayout.NORTH, lblGenre);
 	sl_contentPanel.putConstraint(SpringLayout.WEST, BoxGenre, 0, SpringLayout.WEST, textId);
 	sl_contentPanel.putConstraint(SpringLayout.EAST, BoxGenre, -58, SpringLayout.EAST, contentPanel);

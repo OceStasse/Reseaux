@@ -15,14 +15,14 @@ import javax.crypto.SecretKey;
 
 import database.entities.Billet;
 import database.entities.Caddie;
-import generic.server.ASecureSymetricRequete;
+import generic.server.ASecureRequete;
 import network.communication.communicationException;
 import network.crypto.ACryptographieSymetrique;
 import network.crypto.ConverterObject;
 import network.crypto.CryptographieSymetriqueException;
 import network.protocole.tickmap.reponse.ReponseReserver;
 
-public class RequeteReserver extends ASecureSymetricRequete {
+public class RequeteReserver extends ASecureRequete {
 
 	/**
 	 * 
@@ -49,7 +49,7 @@ public class RequeteReserver extends ASecureSymetricRequete {
 	protected void doAction() {
 		try {
 			try {
-				byte[] decryptBillet = ACryptographieSymetrique.decrypt(Cipher.getInstance("DES/ECB/PKCS5Padding","BC" ), encryptBillet, this.getKey());
+				byte[] decryptBillet = ACryptographieSymetrique.decrypt(Cipher.getInstance("DES/ECB/PKCS5Padding","BC" ), encryptBillet, this.getKeySecret());
 				Map<Integer, Object> statementMap = new HashMap<>();
 				Billet billet = (Billet) ConverterObject.convertByteToObject(decryptBillet);
 				ResultSet resultSet;
@@ -128,7 +128,7 @@ public class RequeteReserver extends ASecureSymetricRequete {
 									places.add(Integer.valueOf(placeRestant + i));
 								}
 								
-								this.communication.send(ReponseReserver.OK(priceUnit * billet.getNbAccompagnant(),places,getKey()));
+								this.communication.send(ReponseReserver.OK(priceUnit * billet.getNbAccompagnant(),places,getKeySecret()));
 
 							}	
 							else
