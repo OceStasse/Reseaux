@@ -73,27 +73,32 @@ public class Access implements Serializable {
 
     public boolean isTransactionEnCours() 
     {
-	return transactionEnCours;
+    	return transactionEnCours;
     }
 
-    public void setTransactionEnCours(boolean transactionEnCours) {
-	this.transactionEnCours = transactionEnCours;
+    public void setTransactionEnCours(boolean transactionEnCours) 
+    {
+    	this.transactionEnCours = transactionEnCours;
     }
 
-    public Connection getConnection() {
-	return connection;
+    public Connection getConnection() 
+    {
+    	return connection;
     }
 
-    public void setConnection(Connection connection) {
-	this.connection = connection;
+    public void setConnection(Connection connection) 
+    {
+    	this.connection = connection;
     }
 
-    public String getPwd() {
-	return pwd;
+    public String getPwd() 
+    {
+    	return pwd;
     }
 
-    public Properties getProperties() {
-	return properties;
+    public Properties getProperties() 
+    {
+    	return properties;
     }
 
     public void setProperties(Properties properties) {

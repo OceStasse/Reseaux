@@ -36,13 +36,13 @@ public class RequeteCaddie extends ASecureRequete {
 		Caddie caddie = new Caddie();
 		Map<Integer, Object> statementMap = new HashMap<Integer, Object>();
 		statementMap.put(1, idpassenger);
-		 try {
-		
-			 PreparedStatement preparedStatement = this.database.getPreparedStatement(sqlStatement);
-       
+		try {
+
+			PreparedStatement preparedStatement = this.database.getPreparedStatement(sqlStatement);
+
 			preparedStatement.setQueryTimeout(5);
 			ResultSet resultSet = this.database.executeQuery(preparedStatement, statementMap);
-            
+
 			if(resultSet.next())
 			{
 				caddie.setIdCaddie(resultSet.getInt("idcaddie"));
@@ -51,15 +51,15 @@ public class RequeteCaddie extends ASecureRequete {
 			else
 			{
 				String sql = "insert into caddie "+
-												" (fk_idpassenger) values(" + this.idpassenger + ")";
+						" (fk_idpassenger) values(" + this.idpassenger + ")";
 				preparedStatement = this.database.getPreparedStatement(sql);
-				
-				
-				
+
+
+
 				if(this.database.executeUpdate(sql) == 1)
 				{
 					preparedStatement = this.database.getPreparedStatement(sqlStatement);
-				       
+
 					preparedStatement.setQueryTimeout(5);
 					resultSet = this.database.executeQuery(preparedStatement, statementMap);
 					if(resultSet.next())
@@ -83,7 +83,7 @@ public class RequeteCaddie extends ASecureRequete {
 					this.database.rollback();
 					this.communication.send(ReponseCaddie.KO("Error with the database"));
 				}
-				
+
 			}
 			this.communication.send(ReponseCaddie.OK(caddie, this.getKeySecret()));
 		} catch (SQLException | InterruptedException e) {
@@ -92,7 +92,7 @@ public class RequeteCaddie extends ASecureRequete {
 				this.communication.send(ReponseCaddie.KO("Error with the database"));
 			} catch (NoSuchAlgorithmException | NoSuchProviderException | NoSuchPaddingException
 					| communicationException | CryptographieSymetriqueException | IOException e1) {
-					
+
 			}
 		} catch (NoSuchAlgorithmException | NoSuchProviderException | IOException | NoSuchPaddingException | CryptographieSymetriqueException e) {
 			traceEvent("Error with crypto: " + e.getMessage());

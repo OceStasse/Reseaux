@@ -107,6 +107,19 @@ public abstract class ACryptographieAsymetrique {
 		
 	}
 	
+	public static PublicKey publicKeyFromCertificate(KeyStore keyStore, String alias,String pwd) throws CryptographieAsymetriqueException
+	{
+		try {
+			
+			X509Certificate cert = (X509Certificate) keyStore.getCertificate(alias);
+			return (PublicKey) cert.getPublicKey();
+		} catch (KeyStoreException e) {
+			throw new CryptographieAsymetriqueException("CryptageAsymetrique()->publicKeyFromCertificate()" + e);
+		}
+		
+	}
+	
+	
 	public static X509Certificate certificate(String location) throws CryptographieAsymetriqueException
 	{
 		FileInputStream fin;
@@ -135,6 +148,17 @@ public abstract class ACryptographieAsymetrique {
 			KeyStore ks = keyStore(typeKS,locationKS,pwdKS);
 			return (PrivateKey) ks.getKey(alias, pwdKey.toCharArray());
 		} catch (CryptographieAsymetriqueException | UnrecoverableKeyException | KeyStoreException | NoSuchAlgorithmException e) {
+			throw new CryptographieAsymetriqueException("CryptageAsymetrique()->privateKey()" + e);		
+			
+		}
+		
+	}
+	
+	public static PrivateKey privateKey(KeyStore keyStore, String pwdKey,String alias) throws CryptographieAsymetriqueException
+	{
+		try {
+			return (PrivateKey) keyStore.getKey(alias, pwdKey.toCharArray());
+		} catch (UnrecoverableKeyException | KeyStoreException | NoSuchAlgorithmException e) {
 			throw new CryptographieAsymetriqueException("CryptageAsymetrique()->privateKey()" + e);		
 			
 		}

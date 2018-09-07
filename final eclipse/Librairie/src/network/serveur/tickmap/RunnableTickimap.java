@@ -1,8 +1,14 @@
 package network.serveur.tickmap;
 
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.cert.X509Certificate;
 import java.sql.SQLException;
 
+import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
 import database.utilities.Access;
@@ -10,13 +16,21 @@ import generic.server.ARequete;
 import generic.server.IConsoleServeur;
 import network.communication.Communication;
 import network.communication.communicationException;
+import network.crypto.CryptographieSymetriqueException;
+import network.protocole.tickmap.reponse.ReponseAchat;
+import network.protocole.tickmap.reponse.ReponseCaddie;
 import network.protocole.tickmap.reponse.ReponseCertificat;
 import network.protocole.tickmap.reponse.ReponseLogin;
+import network.protocole.tickmap.reponse.ReponsePassenger;
+import network.protocole.tickmap.reponse.ReponseReserver;
+import network.protocole.tickmap.reponse.ReponseVols;
+import network.protocole.tickmap.requete.RequeteAchat;
 import network.protocole.tickmap.requete.RequeteCaddie;
 import network.protocole.tickmap.requete.RequeteCertificate;
 import network.protocole.tickmap.requete.RequeteExchangeKey;
 import network.protocole.tickmap.requete.RequeteLogin;
 import network.protocole.tickmap.requete.RequeteLogout;
+import network.protocole.tickmap.requete.RequetePassenger;
 import network.protocole.tickmap.requete.RequeteReserver;
 import network.protocole.tickmap.requete.RequeteVol;
 
@@ -29,13 +43,23 @@ public class RunnableTickimap  implements Runnable{
     private X509Certificate cert;
     private SecretKey keyHMAC;
     private SecretKey keyCipher;
+    private PrivateKey privateKey;
+    private PublicKey publicKey;
+    private PrivateKey privateKeyClient;
+    private PublicKey publicKeyClient;
+    private X509Certificate certClient;
+    
     
     
     private boolean finTransaction;
     private boolean clientConnected;
 	
-	public RunnableTickimap(PoolThread poolThread, IConsoleServeur guiApplication, Communication communication,Access access)
+	public RunnableTickimap(PoolThread poolThread, IConsoleServeur guiApplication, Communication communication,Access access,
+			PrivateKey privatekey, PublicKey publicKey, X509Certificate cert)
 	{
+		this.cert = cert;
+		this.privateKey = privatekey;
+		this.publicKey = publicKey;
 		 this.parent = poolThread;
 	     this.guiApplication = guiApplication;
 	     this.c = communication;
@@ -58,6 +82,7 @@ public class RunnableTickimap  implements Runnable{
 				ARequete req = this.c.receive(ARequete.class);
                 System.out.println("Received request type : " + req.getClass().toString());
 				Runnable runnable = req.createRunnable(this.parent, this.c, this.guiApplication, this.db);
+				//LOGIN
 				if(req instanceof RequeteLogin)
                 {
                     runnable.run();
@@ -66,12 +91,20 @@ public class RunnableTickimap  implements Runnable{
                         previousRequete = RequeteLogin.class;
                     }
                 }
+				//LOGOUT
                 else if(req instanceof RequeteLogout)
                 {
-                    runnable.run();
-                    finTransaction();
-                    previousRequete = null;
+                	if(!isClientConnected())
+                		this.c.send(ReponseCertificat.KO("Please connect first!"));
+                	else
+                	{
+                		runnable.run();
+	                    finTransaction();
+	                    previousRequete = null;
+                	}
+                    
                 }
+				//CERTIFICAT ECHANGE
                 else if(req instanceof RequeteCertificate)
                 {
                 	if(!isClientConnected())
@@ -83,43 +116,95 @@ public class RunnableTickimap  implements Runnable{
 	                	{
 	                		this.c.send(new RequeteCertificate());
 	                		ReponseCertificat rep = this.c.receive(ReponseCertificat.class);
-	                		cert = rep.getCertificate();
+	                		certClient = rep.getCertificate();
 	                        previousRequete = RequeteCertificate.class;
 	                    }
                 	}
                 }
+				//ECHANGE CLE
                 else if(req  instanceof RequeteExchangeKey)
                 {
-                	runnable.run();
-                	if(req.requeteSucceeded())
+                	if(!isClientConnected())
+                		this.c.send(ReponseCertificat.KO("Please connect first!"));
+                	else
                 	{
-                		this.keyHMAC = ((RequeteExchangeKey)req).getKeyHMAC();
-                		this.keyCipher = ((RequeteExchangeKey)req).getKeyCipher();
-                		previousRequete = RequeteExchangeKey.class;
+                		runnable.run();
+	                	if(req.requeteSucceeded())
+	                	{
+	                		this.keyHMAC = ((RequeteExchangeKey)req).getKeyHMAC();
+	                		this.keyCipher = ((RequeteExchangeKey)req).getKeyCipher();
+	                		previousRequete = RequeteExchangeKey.class;
+	                	}
                 	}
+                	
                 }
+				//GET VOL
                 else if(req instanceof RequeteVol)	
                 {
-                	runnable.run();
-                	if(req.requeteSucceeded())
+                	if(!isClientConnected())
                 	{
-                		previousRequete = RequeteVol.class;
+                		this.c.send(ReponseVols.KO("Please connect first!"));
                 	}
-                }
-                else if(req instanceof RequeteReserver)
-                {
-                	runnable.run();
-                	if(req.requeteSucceeded())
+                	else
                 	{
-                		previousRequete = RequeteReserver.class;
+                		runnable.run();
+	                	if(req.requeteSucceeded())
+	                	{
+	                		previousRequete = RequeteVol.class;
+	                	}
+                	}                	
+                }
+                else if(req instanceof RequetePassenger)
+                {
+                	if(!isClientConnected())
+                		this.c.send(ReponsePassenger.KO("Please connect first!"));
+                	else
+                	{
+                		
                 	}
+                	
                 }
-                else if (req instanceof RequeteCaddie)
+				//GET ID CADDIE
+                else if(req instanceof RequeteCaddie)
                 {
-                	runnable.run();
-                	if(req.requeteSucceeded())
+                	if(!isClientConnected())
+                		this.c.send(ReponseCaddie.KO("Please connect first!"));
+                	else
                 	{
-                		previousRequete = RequeteCaddie.class;
+                		runnable.run();
+	                	if(req.requeteSucceeded())
+	                	{
+	                		previousRequete = RequeteCaddie.class;
+	                	}
+                	}
+                	
+                }
+				//RESERVER VOL
+                else if (req instanceof RequeteReserver)
+                {
+                	if(!isClientConnected())
+                		this.c.send(ReponseReserver.KO("Please connect first!"));
+                	else
+                	{
+                		runnable.run();
+	                	if(req.requeteSucceeded())
+	                	{
+	                		previousRequete = RequeteReserver.class;
+	                	}
+                	}
+                	
+                }
+                else if (req instanceof RequeteAchat)
+                {
+                	if(!isClientConnected())
+                		this.c.send(ReponseAchat.KO("Please connect first!"));
+                	else
+                	{
+                		runnable.run();
+                		if(req.requeteSucceeded())
+                		{
+                			this.previousRequete = RequeteAchat.class;
+                		}
                 	}
                 }
 			}
@@ -128,7 +213,7 @@ public class RunnableTickimap  implements Runnable{
                     + "#Commit successful"
                     + "#RunnableTICKIMAP");
 		}
-		catch(communicationException | SQLException ex)
+		catch(communicationException | SQLException | NoSuchAlgorithmException | NoSuchProviderException | NoSuchPaddingException | CryptographieSymetriqueException | IOException ex)
 		{
 			this.guiApplication.TraceEvenements(this.c.getSocket().getRemoteSocketAddress().toString()
                     + "#" + ex.getMessage()

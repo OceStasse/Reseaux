@@ -19,6 +19,8 @@ public abstract class ASecureRequete extends ARequete implements ISecureRequete
 	private PrivateKey keyPrivate;
 	private PublicKey keyPublic;
 	private SecretKey keySecret;
+	private boolean crypted;
+	
 	public PrivateKey getKeyPrivate() {
 		return keyPrivate;
 	}
@@ -45,7 +47,6 @@ public abstract class ASecureRequete extends ARequete implements ISecureRequete
 
 	protected ASecureRequete(String requestTypeName, String sqlStatement) {
 		super(requestTypeName, sqlStatement);
-		// TODO Auto-generated constructor stub
 	}
 
  
@@ -66,10 +67,10 @@ public abstract class ASecureRequete extends ARequete implements ISecureRequete
 
 
 
-	protected void traceEvent(String message){
+	protected void traceEvent(String message,String protocole){
         consoleServeur.TraceEvenements(communication.getSocket().getRemoteSocketAddress().toString()
                                         + "#" + message
-                                        + "#" + requestTypeName + "@LUGAP");
+                                        + "#" + requestTypeName + "@"+protocole);
     }
     
 	@Override
@@ -85,6 +86,22 @@ public abstract class ASecureRequete extends ARequete implements ISecureRequete
 
 	public void setKeySecret(SecretKey keySecret) {
 		this.keySecret = keySecret;
+	}
+
+
+
+	public boolean isCrypted() {
+		return crypted;
+	}
+
+
+
+	public void enableCrypted() {
+		this.crypted = true;
+	}
+	
+	public void disenableCrypted() {
+		this.crypted = false;
 	}
 
 }

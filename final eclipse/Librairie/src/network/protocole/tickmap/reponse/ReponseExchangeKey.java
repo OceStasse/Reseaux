@@ -25,6 +25,7 @@ public class ReponseExchangeKey extends AReponse {
         super(message, successful);
         this.keyCipher = keyCipher;
         this.keyHMAC = keyHMAC;
+        
     }
 	
 	public SecretKey getKeyHMAC() {
