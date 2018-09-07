@@ -1,9 +1,12 @@
 package network.protocole.tickmap.requete;
 
+import java.io.IOException;
+
 import javax.crypto.SecretKey;
 
 import generic.server.ASecureRequete;
 import network.crypto.AHMAC;
+import network.crypto.ConverterObject;
 import network.crypto.HMACException;
 
 public class RequeteAchat extends ASecureRequete {
@@ -30,13 +33,25 @@ public class RequeteAchat extends ASecureRequete {
 	{
 		//checked hmac
 		// checked accept
-		if(this.accepted)
-		{
-			//ajoute les achat dans la table ticket
-		}
-		else
-		{
-			//remet les places correctement au niveau du vol
+		try {
+			if(AHMAC.verify("HMAC-MD5", "BC", this.hmac, ConverterObject.convertObjectToByte(this), this.getKeySecret()))
+			{
+				
+				if(this.accepted)
+				{
+					//ajoute les achat dans la table ticket
+				}
+				else
+				{
+					//remet les places correctement au niveau du vol
+				}
+			}
+			else
+			{
+				// reponse ko
+			}
+		} catch (HMACException | IOException e) {
+			//reponse ko error hmac
 		}
 	}
 
