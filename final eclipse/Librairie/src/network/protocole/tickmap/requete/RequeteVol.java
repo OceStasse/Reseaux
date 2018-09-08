@@ -14,13 +14,11 @@ import network.protocole.tickmap.reponse.ReponseVols;
 
 public class RequeteVol extends ARequete {
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	
 	
-	public RequeteVol(PrivateKey key) throws SignatureException, IOException
+	public RequeteVol()
 	{
 		super("GetFlight","select * "+
 					   "from flight " +
@@ -54,6 +52,7 @@ public class RequeteVol extends ARequete {
 					System.out.println("    Flight n°" + vols.size() + " : " + vol.toString());
 				}
 				System.out.println("-------");
+				//crypté
 				this.reponse = ReponseVols.OK(vols);
 				traceEvent("GetFlight OK (flights found : " + vols.size() + ")");
 			}

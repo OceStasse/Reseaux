@@ -22,11 +22,11 @@ public class ReponseReserver extends AReponse {
 	private byte[] price;
 	private byte[] places;
 	
-	protected ReponseReserver(String message, boolean successful,int price, ArrayList<?> places,SecretKey key) throws IOException, CryptographieSymetriqueException, NoSuchAlgorithmException, NoSuchProviderException, NoSuchPaddingException {
+	protected ReponseReserver(String message, boolean successful,int price, ArrayList<?> places,SecretKey key) 
+			throws IOException, CryptographieSymetriqueException, NoSuchAlgorithmException, 
+			NoSuchProviderException, NoSuchPaddingException {
 		super(message, successful);
-		//cryptage si necessaire
-		if(price == -1)
-		{
+		
 			Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding", "BC");
 			//convert int to byte
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -36,11 +36,12 @@ public class ReponseReserver extends AReponse {
 		    
 			this.setPrice(ACryptographieSymetrique.encrypt(cipher,bos.toByteArray(), key));
 			this.setPlaces(ACryptographieSymetrique.encrypt(cipher, ConverterObject.convertObjectToByte(places),key));
-		}
 	}
-	/**
-	 * 
-	 */
+	
+	protected ReponseReserver(String message, boolean successful) {
+		super(message, successful);
+	}
+	
 	private static final long serialVersionUID = 1L;
 	
 	public static ReponseReserver OK(int price, ArrayList<?> places, SecretKey key) throws NoSuchAlgorithmException, NoSuchProviderException, NoSuchPaddingException, IOException, CryptographieSymetriqueException
@@ -50,7 +51,7 @@ public class ReponseReserver extends AReponse {
 	
 	public static ReponseReserver KO(String msg) throws NoSuchAlgorithmException, NoSuchProviderException, NoSuchPaddingException, IOException, CryptographieSymetriqueException
 	{
-		return new ReponseReserver(msg,false,-1,null,null);
+		return new ReponseReserver(msg,false);
 	}
 
 	public byte[] getPrice() {

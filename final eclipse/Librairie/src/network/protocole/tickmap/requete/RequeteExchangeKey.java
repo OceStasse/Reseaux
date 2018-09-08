@@ -1,15 +1,19 @@
 package network.protocole.tickmap.requete;
 
 
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
-
-import generic.server.ARequete;
+import generic.server.ASecureRequete;
 import network.communication.communicationException;
 import network.crypto.ACryptographieSymetrique;
+import network.crypto.CryptographieAsymetriqueException;
 import network.crypto.CryptographieSymetriqueException;
 import network.protocole.tickmap.reponse.ReponseExchangeKey;
 
-public class RequeteExchangeKey extends ARequete {
+public class RequeteExchangeKey extends ASecureRequete {
 	
 
 	private static final long serialVersionUID = 1L;
@@ -47,10 +51,10 @@ public class RequeteExchangeKey extends ARequete {
 				
 				keyHMAC = ACryptographieSymetrique.secretKey(algoHMAC, provider);
 				keyCipher = ACryptographieSymetrique.secretKey(algoCipher, provider);
-				this.reponse = ReponseExchangeKey.OK(keyHMAC, keyCipher);
+				this.reponse = ReponseExchangeKey.OK(keyHMAC, keyCipher,this.getKeyPublic());
 				traceEvent("ExcahngeKey ok");
 				
-			} catch (CryptographieSymetriqueException e) {
+			} catch (CryptographieSymetriqueException | NoSuchAlgorithmException | NoSuchProviderException | NoSuchPaddingException | CryptographieAsymetriqueException | IOException e) {
 				
 				this.reponse = ReponseExchangeKey.KO("error to load secret key");
 				traceEvent("Exchangekey->getKey: " + e.getMessage());

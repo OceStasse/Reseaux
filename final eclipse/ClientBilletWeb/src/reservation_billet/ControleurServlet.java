@@ -31,9 +31,7 @@ import database.utilities.Access;
 @WebServlet("/ControleurServlet")
 public class ControleurServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	private final int MAXINACTIVEINTERVAL = 120;
-
 	private final String DB_IP = "localhost";
 	private final String DB_PORT = "33306";
 	private final String DB_SCHEMA = "BD_AIRPORT";
@@ -83,8 +81,6 @@ public class ControleurServlet extends HttpServlet {
 		super.destroy();
 		db = null;
 	}
-
-
 
 	/**
 	 * @see Servlet#getServletInfo()
@@ -162,7 +158,6 @@ public class ControleurServlet extends HttpServlet {
 		processRequest(request, response);
 	}
 
-	
 	private void requeteLogin(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getParameter("inputLogin") == null){
 			try {

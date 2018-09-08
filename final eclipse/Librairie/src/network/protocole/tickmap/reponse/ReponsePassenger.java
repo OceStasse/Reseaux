@@ -6,7 +6,6 @@ public class ReponsePassenger extends AReponse {
 
 	protected ReponsePassenger(String message, boolean successful) {
 		super(message, successful);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

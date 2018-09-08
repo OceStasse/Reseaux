@@ -40,10 +40,12 @@ public class RequeteAchat extends ASecureRequete {
 				if(this.accepted)
 				{
 					//ajoute les achat dans la table ticket
+					
 				}
 				else
 				{
 					//remet les places correctement au niveau du vol
+					
 				}
 			}
 			else
